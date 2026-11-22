@@ -845,10 +845,16 @@
         if (activeConfig.debug) {
           console.log("[Location Spoofer] Patched " + result.wifiCount + " Wi-Fi, " + result.cellCount + " Cell. Format: " + result.kind);
         }
-        completeResponse(result.response, result.wifiCount, result.cellCount);
+        var _finish = function () { completeResponse(result.response, result.wifiCount, result.cellCount); };
+        if (activeConfig.debug && activeConfig.configUrl && typeof $httpClient !== "undefined") {
+          $httpClient.get({ url: activeConfig.configUrl + "&report=patched_wifi" + result.wifiCount + "_cell" + result.cellCount + "_" + result.kind, timeout: 3 }, function () { _finish(); });
+        } else {
+          _finish();
+        }
       } catch (err) {
         if (activeConfig.debug) {
           console.log("[Location Spoofer] Failed: " + err.message);
+          try { if (activeConfig.configUrl && typeof $httpClient !== "undefined") { $httpClient.get({ url: activeConfig.configUrl + "&report=failed_" + encodeURIComponent(String(err.message).slice(0, 120)), timeout: 3 }, function () {}); } } catch (e2) {}
         }
         if (activeConfig.failOpen) {
           passThrough();
