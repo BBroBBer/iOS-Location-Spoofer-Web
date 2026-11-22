@@ -4,11 +4,11 @@
   Copyright (c) 2026 akudamatata (https://github.com/akudamatata/iOS-Location-Spoofer-Web)
   Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
   
-  ⚠️【特别声明】：本项目完全免费开源，严禁以任何形式进行二次售卖、转售、商业收费代搭建、打包牟利等行为！
-  若您是通过付费渠道获取本项目的，请立即申请退款并举报不良商家！
+  ⚠️ NOTICE: This project is completely free and open source. Reselling it, charging for setup, or bundling it for profit in any form is strictly prohibited!
+  If you paid for this project, request a refund immediately and report the seller!
 -->
 <!doctype html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
@@ -933,17 +933,17 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <div id="coord-bubble">
   <div id="bubble-content">
     <div class="coords" id="bubble-coords">---, ---</div>
-    <div class="alt" id="bubble-alt">海拔 — m</div>
+    <div class="alt" id="bubble-alt">Altitude — m</div>
   </div>
-  <button id="bubble-fav-btn" aria-label="收藏当前位置">
+  <button id="bubble-fav-btn" aria-label="Save current location">
     <svg id="bubble-fav-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #FFB800;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
   </button>
 </div>
 
 <!-- Top search bar -->
 <div id="search-bar">
-  <input id="search-input" type="text" placeholder="搜索地点…" autocomplete="off" spellcheck="false">
-  <button id="search-btn" aria-label="搜索">
+  <input id="search-input" type="text" placeholder="Search places…" autocomplete="off" spellcheck="false">
+  <button id="search-btn" aria-label="Search">
     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
   </button>
   <div id="search-history" class="hidden"></div>
@@ -954,32 +954,32 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <div id="overlay"></div>
 
 <!-- Left: Favorites button -->
-<button id="fav-btn" aria-label="收藏夹">
+<button id="fav-btn" aria-label="Favorites">
   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" style="color: #FFB800;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
   <span id="fav-badge">0</span>
 </button>
 
 <!-- Left: Config button -->
-<button id="config-btn" aria-label="小火箭配置">
+<button id="config-btn" aria-label="Shadowrocket setup">
   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
 </button>
 
 <!-- Right: Layer switcher -->
-<button id="layer-btn" aria-label="切换地图">
+<button id="layer-btn" aria-label="Switch map">
   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
 </button>
 <div id="layer-menu">
   <div class="layer-item" data-layer="amap" id="layer-amap">
-    高德地图<span class="check">✓</span>
+    Amap<span class="check">✓</span>
   </div>
   <div class="layer-item" data-layer="sat" id="layer-sat">
-    高德卫星<span class="check">✓</span>
+    Amap Satellite<span class="check">✓</span>
   </div>
   <div class="layer-item" data-layer="osm" id="layer-osm">
-    国际地图<span class="check">✓</span>
+    World Map<span class="check">✓</span>
   </div>
   <div class="layer-item" data-layer="esri" id="layer-esri">
-    国际卫星<span class="check">✓</span>
+    World Satellite<span class="check">✓</span>
   </div>
 </div>
 
@@ -987,7 +987,7 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <div id="zoom-controls">
   <button class="zoom-btn" id="btn-zoom-in">+</button>
   <button class="zoom-btn" id="btn-zoom-out">−</button>
-  <button class="zoom-btn" id="btn-locate" aria-label="定位当前位置">
+  <button class="zoom-btn" id="btn-locate" aria-label="Go to my location">
     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
   </button>
 </div>
@@ -995,44 +995,44 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <!-- Login overlay -->
 <div id="login-overlay" style="display: none;">
   <div id="login-card">
-    <h2>安全登录验证</h2>
-    <p>自建定位服务受密码保护，请输入您的访问密钥 (Token) 以解锁地图面板。</p>
-    <input id="login-input" type="password" placeholder="请输入密码 (Token)" autocomplete="off">
-    <button id="login-submit">进入系统</button>
+    <h2>Secure Login</h2>
+    <p>This self-hosted location service is password-protected. Enter your access key (Token) to unlock the map panel.</p>
+    <input id="login-input" type="password" placeholder="Enter password (Token)" autocomplete="off">
+    <button id="login-submit">Sign in</button>
   </div>
 </div>
 
 <!-- Config panel -->
 <div id="config-panel">
   <div id="config-panel-header">
-    <h2>Shadowrocket 配置</h2>
+    <h2>Shadowrocket Setup</h2>
     <button id="config-close">
       <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
   </div>
   <div id="config-content">
     <div class="config-section">
-      <div class="config-title">方法 A：一键导入小火箭模块</div>
-      <div class="config-desc">最推荐的方式。点击下方按钮即可唤醒手机上的 Shadowrocket 自动导入到【模块】列表中。</div>
-      <button class="config-action-btn" id="btn-config-import">一键导入模块</button>
+      <div class="config-title">Option A: One-tap import into Shadowrocket</div>
+      <div class="config-desc">Recommended. Tap the button below to open Shadowrocket on your phone and add the module to your Modules list automatically.</div>
+      <button class="config-action-btn" id="btn-config-import">Import module</button>
     </div>
     <div class="config-section">
-      <div class="config-title">方法 B：手动复制模块链接</div>
-      <div class="config-desc">如果在微信或第三方浏览器无法唤醒，请复制下方完整的模块链接，前往 Shadowrocket 的【配置】页面 -> 点击进入【模块】 -> 点击右上角【+】号 -> 粘贴此 URL 下载即可。</div>
+      <div class="config-title">Option B: Copy the module link manually</div>
+      <div class="config-desc">If Shadowrocket doesn’t open (e.g. from WeChat or a third-party browser), copy the full module link below, then in Shadowrocket go to Config → Modules → tap + (top right) → paste the URL and download.</div>
       <div class="config-code-box" id="config-url-text">...</div>
-      <button class="config-action-btn" id="btn-config-copy-url">复制模块链接</button>
+      <button class="config-action-btn" id="btn-config-copy-url">Copy module link</button>
     </div>
     <div class="config-section">
-      <div class="config-title">方法 C：一键复制 argument 参数</div>
-      <div class="config-desc">如果您已导入了模块，只需将下方为您拼装好的 argument 覆盖原模块参数即可。</div>
+      <div class="config-title">Option C: Copy the argument string</div>
+      <div class="config-desc">If you already imported the module, just replace its argument with the one generated below.</div>
       <div class="config-code-box" id="config-arg-text">...</div>
-      <button class="config-action-btn" id="btn-config-copy-arg">复制 argument 参数</button>
+      <button class="config-action-btn" id="btn-config-copy-arg">Copy argument</button>
     </div>
     <div class="config-section" style="border-bottom:none;">
       <div id="dark-toggle">
         <div id="dark-toggle-label">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          深色模式
+          Dark mode
         </div>
         <div class="toggle-switch" id="dark-toggle-switch"><div class="toggle-knob"></div></div>
       </div>
@@ -1043,15 +1043,15 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <!-- Favorites panel -->
 <div id="fav-panel">
   <div id="fav-panel-header">
-    <h2>收藏夹</h2>
-    <button id="fav-close" aria-label="关闭">
+    <h2>Favorites</h2>
+    <button id="fav-close" aria-label="Close">
       <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
   </div>
   <div id="fav-list">
     <div id="fav-empty">
       <svg viewBox="0 0 24 24" width="40" height="40" stroke="#8E8E93" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 12px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      暂无收藏<br>锁定位置后点「收藏」即可保存
+      No favorites yet<br>Lock a location, then tap the star to save it
     </div>
   </div>
 </div>
@@ -1063,17 +1063,17 @@ html.dark #search-results::-webkit-scrollbar-thumb {
   <!-- Expanded params (shown when drawer is dragged up) -->
   <div id="drawer-expanded">
     <div class="param-row">
-      <span class="param-label">海拔</span>
-      <input class="param-input" id="inp-alt" type="number" inputmode="decimal" placeholder="自动">
+      <span class="param-label">Altitude</span>
+      <input class="param-input" id="inp-alt" type="number" inputmode="decimal" placeholder="Auto">
       <span class="param-unit">m</span>
     </div>
     <div class="param-row">
-      <span class="param-label">水平精度</span>
+      <span class="param-label">H. accuracy</span>
       <input class="param-input" id="inp-hacc" type="number" inputmode="decimal" placeholder="39">
       <span class="param-unit">m</span>
     </div>
     <div class="param-row">
-      <span class="param-label">垂直精度</span>
+      <span class="param-label">V. accuracy</span>
       <input class="param-input" id="inp-vacc" type="number" inputmode="decimal" placeholder="1000">
       <span class="param-unit">m</span>
     </div>
@@ -1083,11 +1083,11 @@ html.dark #search-results::-webkit-scrollbar-thumb {
   <div id="drawer-collapsed">
     <div id="status-pill">
       <span id="status-dot"></span>
-      <span id="status-text">点击地图选择位置</span>
+      <span id="status-text">Tap the map to pick a location</span>
     </div>
     <button id="btn-lock">
       <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      <span id="btn-lock-label">锁定</span>
+      <span id="btn-lock-label">Lock</span>
     </button>
   </div>
 </div>
@@ -1096,15 +1096,15 @@ html.dark #search-results::-webkit-scrollbar-thumb {
 <div id="modal-backdrop">
   <div id="modal">
     <div id="modal-header">
-      <h3>命名收藏</h3>
+      <h3>Name this favorite</h3>
       <p id="modal-coords-hint">--</p>
     </div>
     <div id="modal-body">
-      <input id="modal-name" type="text" maxlength="30" placeholder="输入名称（如：家、公司、咖啡厅）">
+      <input id="modal-name" type="text" maxlength="30" placeholder="Enter a name (e.g. Home, Office, Café)">
     </div>
     <div id="modal-footer">
-      <button class="modal-btn cancel" id="modal-cancel">取消</button>
-      <button class="modal-btn confirm" id="modal-confirm">保存</button>
+      <button class="modal-btn cancel" id="modal-cancel">Cancel</button>
+      <button class="modal-btn confirm" id="modal-confirm">Save</button>
     </div>
   </div>
 </div>
@@ -1199,21 +1199,21 @@ function fmtCoord(v,pos,neg){
 }
 function updateBubble(){
   elBubbleCoords.textContent=fmtCoord(WGS.lat,'N','S')+'  '+fmtCoord(WGS.lng,'E','W');
-  elBubbleAlt.textContent=altitude!==null?('海拔 '+Math.round(altitude)+' m'):'海拔 — m';
+  elBubbleAlt.textContent=altitude!==null?('Altitude '+Math.round(altitude)+' m'):'Altitude — m';
 }
 function updateStatus(){
   if(!lockedWGS){
     elStatusDot.className='status-dot';
-    elStatusText.textContent='拖动地图，然后点「锁定」';
+    elStatusText.textContent='Drag the map, then tap “Lock”';
     return;
   }
   var same=Math.abs(WGS.lat-lockedWGS.lat)<0.00001&&Math.abs(WGS.lng-lockedWGS.lng)<0.00001;
   if(same){
     elStatusDot.className='status-dot saved';
-    elStatusText.textContent='已锁定 · '+WGS.lat.toFixed(4)+', '+WGS.lng.toFixed(4);
+    elStatusText.textContent='Locked · '+WGS.lat.toFixed(4)+', '+WGS.lng.toFixed(4);
   }else{
     elStatusDot.className='status-dot unsaved';
-    elStatusText.textContent='位置已移动，点「锁定」生效';
+    elStatusText.textContent='Location moved — tap “Lock” to apply';
   }
 }
 
@@ -1250,10 +1250,10 @@ var layers={};
 function buildLayers(){
   layers.amap=L.tileLayer(
     'https://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7',
-    {subdomains:'1234',maxZoom:19,attribution:'© 高德地图'});
+    {subdomains:'1234',maxZoom:19,attribution:'© Amap'});
   layers.sat=L.layerGroup([
     L.tileLayer('https://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}',{subdomains:'1234',maxZoom:19}),
-    L.tileLayer('https://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8',{subdomains:'1234',maxZoom:19,attribution:'© 高德地图'})
+    L.tileLayer('https://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8',{subdomains:'1234',maxZoom:19,attribution:'© Amap'})
   ]);
   layers.osm=L.tileLayer(
     'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
@@ -1338,7 +1338,7 @@ function renderHistory() {
           + '<span>' + escHtml(q) + '</span>'
           + '</div>';
   });
-  html += '<div class="history-clear" onclick="clearHistory(event)">清除历史记录</div>';
+  html += '<div class="history-clear" onclick="clearHistory(event)">Clear history</div>';
   container.innerHTML = html;
 }
 window.onHistoryClick = function(e, query) {
@@ -1358,11 +1358,11 @@ function doSearch(){
   var q=$id('search-input').value.trim();
   if(!q)return;
   saveHistory(q);
-  $id('search-input').blur(); // 取消焦点
-  $id('search-history').classList.add('hidden'); // 隐藏历史记录下拉
+  $id('search-input').blur(); // blur input
+  $id('search-history').classList.add('hidden'); // hide history dropdown
 
 
-  // 坐标直接跳转：支持 "lat, lng" 或 "lat lng" 格式
+  // Direct coordinate jump: supports "lat, lng" or "lat lng"
   var coordMatch=q.match(/^\s*(-?\d+\.?\d*)\s*[,\s]\s*(-?\d+\.?\d*)\s*$/);
   if(coordMatch){
     var cLat=parseFloat(coordMatch[1]),cLng=parseFloat(coordMatch[2]);
@@ -1371,12 +1371,12 @@ function doSearch(){
       map.setView([disp[0],disp[1]],16,{animate:true});
       $id('search-results').style.display='none';
       $id('search-input').value='';
-      toast('已跳转到坐标 '+cLat.toFixed(5)+', '+cLng.toFixed(5));
+      toast('Jumped to coordinates '+cLat.toFixed(5)+', '+cLng.toFixed(5));
       return;
     }
   }
   var box=$id('search-results');
-  box.innerHTML='<div class="result-row"><span class="name">搜索中…</span></div>';
+  box.innerHTML='<div class="result-row"><span class="name">Searching…</span></div>';
   box.style.display='block';
 
   if (AMAP_KEY) {
@@ -1385,7 +1385,7 @@ function doSearch(){
       .then(function(d){
         box.innerHTML='';
         if(d.status !== '1' || !d.tips || !d.tips.length){
-          box.innerHTML='<div class="result-row"><span class="name">未找到结果</span></div>';
+          box.innerHTML='<div class="result-row"><span class="name">No results found</span></div>';
           return;
         }
         d.tips.forEach(function(it){
@@ -1405,10 +1405,10 @@ function doSearch(){
           box.appendChild(row);
         });
         if (!box.children.length) {
-          box.innerHTML='<div class="result-row"><span class="name">无有效定位结果</span></div>';
+          box.innerHTML='<div class="result-row"><span class="name">No valid location results</span></div>';
         }
       }).catch(function(){
-        box.innerHTML='<div class="result-row"><span class="name">搜索失败，请重试</span></div>';
+        box.innerHTML='<div class="result-row"><span class="name">Search failed, please try again</span></div>';
       });
   } else {
     fetch('https://nominatim.openstreetmap.org/search?format=json&limit=6&q='+encodeURIComponent(q))
@@ -1416,7 +1416,7 @@ function doSearch(){
       .then(function(a){
         box.innerHTML='';
         if(!a||!a.length){
-          box.innerHTML='<div class="result-row"><span class="name">未找到结果 (国内搜索建议配置高德 Key)</span></div>';
+          box.innerHTML='<div class="result-row"><span class="name">No results (for places in China, configure an Amap key)</span></div>';
           return;
         }
         a.forEach(function(it){
@@ -1434,7 +1434,7 @@ function doSearch(){
           box.appendChild(row);
         });
       }).catch(function(){
-        box.innerHTML='<div class="result-row"><span class="name">搜索失败，请重试</span></div>';
+        box.innerHTML='<div class="result-row"><span class="name">Search failed, please try again</span></div>';
       });
   }
 }
@@ -1455,7 +1455,7 @@ document.addEventListener('click',function(e){
 /* ─── Lock location ──────────────────────────────────────── */
 function lockLocation(){
   elBtnLock.classList.add('locking');
-  elBtnLockLabel.textContent='保存中…';
+  elBtnLockLabel.textContent='Saving…';
 
   var altVal=$id('inp-alt').value?parseFloat($id('inp-alt').value):altitude;
   var haccVal=$id('inp-hacc').value?parseFloat($id('inp-hacc').value):hacc;
@@ -1476,14 +1476,14 @@ function lockLocation(){
     lockedWGS={lat:WGS.lat,lng:WGS.lng};
     $id('crosshair').classList.add('locked');
     setTimeout(function(){$id('crosshair').classList.remove('locked');},400);
-    toast('位置已锁定！请前往系统 定位服务 重新开关生效');
+    toast('Location locked! Turn Location Services off and back on in iOS Settings to apply');
     updateStatus();
     updateLockedPin(WGS.lat,WGS.lng);
   }).catch(function(){
-    toast('保存失败，请检查网络或 Token');
+    toast('Save failed — check your network or Token');
   }).finally(function(){
     elBtnLock.classList.remove('locking');
-    elBtnLockLabel.textContent='锁定';
+    elBtnLockLabel.textContent='Lock';
   });
 }
 elBtnLock.addEventListener('click',lockLocation);
@@ -1547,7 +1547,7 @@ function loadFavorites(){
 }
 
 /* Update the bubble star icon: solid if current position is already a favorite */
-// 坐标匹配：容差 0.000015° ≈ 1.7m，用于消除 WGS84↔GCJ02 转换的浮点误差
+// Coordinate match: tolerance 0.000015° ≈ 1.7 m, absorbs WGS84↔GCJ02 float error
 function coordMatch(f, wgs) {
   return Math.abs(f.latitude  - wgs.lat) < 0.000015
       && Math.abs(f.longitude - wgs.lng) < 0.000015;
@@ -1602,8 +1602,8 @@ function renderFavorites(){
 
 function deleteFavorite(id){
   fetch(API('/favorites/'+id),{method:'DELETE'})
-    .then(function(){loadFavorites();toast('已删除');})
-    .catch(function(){toast('删除失败');});
+    .then(function(){loadFavorites();toast('Deleted');})
+    .catch(function(){toast('Delete failed');});
 }
 
 function escHtml(s){
@@ -1631,11 +1631,11 @@ elOverlay.addEventListener('click',function(){
 /* Add favorite flow */
 $id('bubble-fav-btn').addEventListener('click', function(e){
   e.stopPropagation();
-  // 已收藏 → 取消收藏；未收藏 → 弹出新增窗口
+  // Already saved → remove; otherwise → open add dialog
   var existing=favorites.find(function(f){ return coordMatch(f, WGS); });
   if(existing){
     deleteFavorite(existing.id);
-    toast('已取消收藏');
+    toast('Removed from favorites');
   } else {
     showSaveModal();
   }
@@ -1650,12 +1650,12 @@ $id('btn-locate').addEventListener('click', function(e){
       var lng = pos.coords.longitude;
       var disp = (currentLayer === 'osm'||currentLayer === 'esri') ? [lat, lng] : GCJ.w2g(lat, lng);
       map.setView([disp[0], disp[1]], 16, {animate: true});
-      toast('已定位到当前真实位置');
+      toast('Moved to your real current location');
     }, function(err) {
-      toast('定位失败: ' + err.message);
+      toast('Location failed: ' + err.message);
     }, {enableHighAccuracy: true, timeout: 6000});
   } else {
-    toast('您的浏览器不支持定位功能');
+    toast('Your browser does not support geolocation');
   }
 });
 
@@ -1669,14 +1669,14 @@ $id('modal-cancel').addEventListener('click',function(){$id('modal-backdrop').cl
 $id('modal-confirm').addEventListener('click',saveFavorite);
 $id('modal-name').addEventListener('keydown',function(e){if(e.key==='Enter')saveFavorite();});
 function saveFavorite(){
-  var name=$id('modal-name').value.trim()||'未命名';
+  var name=$id('modal-name').value.trim()||'Untitled';
   var altVal=$id('inp-alt').value?parseFloat($id('inp-alt').value):altitude;
 
-  // 去重：相同位置（容差 0.000015°）不重复收藏
+  // Dedupe: skip saving the same spot twice (tolerance 0.000015°)
   var duplicate=favorites.some(function(f){ return coordMatch(f, WGS); });
   if(duplicate){
     $id('modal-backdrop').classList.remove('open');
-    toast('该位置已在收藏夹中');
+    toast('This location is already in favorites');
     return;
   }
 
@@ -1694,9 +1694,9 @@ function saveFavorite(){
     .then(function(){
       $id('modal-backdrop').classList.remove('open');
       loadFavorites();
-      toast('已加入收藏');
+      toast('Added to favorites');
       updateFavStar();
-    }).catch(function(){toast('收藏失败');});
+    }).catch(function(){toast('Failed to save favorite');});
 }
 
 /* Layer menu */
@@ -1749,19 +1749,19 @@ $id('btn-config-import').addEventListener('click', function() {
   var url = $id('config-url-text').textContent;
   var importUrl = 'shadowrocket://install/module?url=' + encodeURIComponent(url);
   window.location.href = importUrl;
-  toast('已唤起 Shadowrocket 导入模块');
+  toast('Opening Shadowrocket to import the module');
 });
 
 $id('btn-config-copy-url').addEventListener('click', function() {
   navigator.clipboard.writeText($id('config-url-text').textContent)
-    .then(function() { toast('模块链接已复制'); })
-    .catch(function() { toast('复制失败，请手动选择复制'); });
+    .then(function() { toast('Module link copied'); })
+    .catch(function() { toast('Copy failed — please select and copy manually'); });
 });
 
 $id('btn-config-copy-arg').addEventListener('click', function() {
   navigator.clipboard.writeText($id('config-arg-text').textContent)
-    .then(function() { toast('参数已复制'); })
-    .catch(function() { toast('复制失败，请手动选择复制'); });
+    .then(function() { toast('Argument copied'); })
+    .catch(function() { toast('Copy failed — please select and copy manually'); });
 });
 
 // Click overlay closes everything
@@ -1792,14 +1792,14 @@ function showLoginScreen(onSuccess) {
   function attemptLogin() {
     var val = input.value.trim();
     if (!val) {
-      toast('请输入密码');
+      toast('Please enter the password');
       return;
     }
     submit.disabled = true;
-    submit.textContent = '验证中...';
+    submit.textContent = 'Verifying...';
     verifyToken(val, function(ok) {
       submit.disabled = false;
-      submit.textContent = '进入系统';
+      submit.textContent = 'Sign in';
       if (ok) {
         // Cache token for 30 days
         var session = {
@@ -1811,9 +1811,9 @@ function showLoginScreen(onSuccess) {
         
         overlay.style.display = 'none';
         onSuccess(val);
-        toast('登录成功，有效期30天');
+        toast('Signed in — valid for 30 days');
       } else {
-        toast('密码错误，请重新输入');
+        toast('Wrong password, please try again');
         input.value = '';
         input.focus();
       }
@@ -1891,12 +1891,12 @@ handleAuthentication(function(activeToken) {
       loadHistory();
       renderHistory();
       loadFavorites();
-      toast('无法连接服务器，请检查 Token');
+      toast('Cannot reach the server — check your Token');
     });
 });
 
 if (!AMAP_KEY) {
-  $id('search-input').placeholder = '搜索地点 (国内搜索建议配置高德 Key)';
+  $id('search-input').placeholder = 'Search places (add an Amap key for China)';
 }
 
 })();
